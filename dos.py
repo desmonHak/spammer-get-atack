@@ -46,7 +46,7 @@ def b():
 				elif str(argv[1]) == 'udp':		
 					s.sendto(eax.encode(),(str(argv[3]), int(argv[4])))
 		
-				print("funciona")
+				print("atackando, exito al mandar el packete: "+str(argv[1])+" a; "+str(argv[3])+":"+str(argv[4]))
 
 			except BrokenPipeError:
 
