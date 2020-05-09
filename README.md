@@ -13,3 +13,5 @@ ataque denegacion de servicios mediante el envio de packetes tcp o udp.
 ------------------------------------------------------------------------------
 	python3 dos.py  <protocolo>  <theard>  <ip a atacar>  <puerto>
 ------------------------------------------------------------------------------
+		
+#ATENCION, Para detener el ataque, predione Ctrl + D
