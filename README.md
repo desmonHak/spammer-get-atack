@@ -1,5 +1,5 @@
 # dos-atack.py
-ataque denegacion de servicios mediante el envio de packetes tcp o udp.
+ataque denegacion de servicios sencillo  en base al envio de packetes tcp o udp.
 
 ------------------------------------------------------------------------------
 	<protocolo>         protocolo a usar: tcp o udp.
