@@ -4,7 +4,6 @@
 
 inundacion de trafico mediante packetes tcp o udp.
 
---------
 
 ```batch
 
@@ -20,8 +19,6 @@ inundacion de trafico mediante packetes tcp o udp.
 	python3 dos.py  <protocolo>  <theard>  <ip a atacar>  <puerto>
 
 ```
-
---------
 		
 #ATENCION, Para detener el ataque, predione Ctrl + D
 
