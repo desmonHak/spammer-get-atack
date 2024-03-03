@@ -2,7 +2,7 @@
 
 --------
 
-Un spammer de servicios sencillo  en base al envio de packetes tcp o udp.
+inundacion de trafico mediante packetes tcp o udp.
 
 --------
 
